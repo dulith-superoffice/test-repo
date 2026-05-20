@@ -38,7 +38,7 @@ jobs:
       # 3. Call the SuperOffice Public API
       - name: Publish MFE Version
         run: |
-          curl -X POST https://app.beeceptor.com/console/id-dm-test/api/mfe/publish \
+          curl -X POST https://id-dm-test.free.beeceptor.com/api/mfe/publish \
             -H "Authorization: Bearer ${{ steps.auth.outputs.token }}" \
             -F "version=${{ github.sha }}" \
             -F "bundle=@dist.zip"
